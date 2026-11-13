@@ -1,3 +1,0 @@
-SERVICE   IMAGE                       STATUS                    PORTS
-api       hashicorp/http-echo:1.0.0   Up 48 minutes             5678/tcp, 8080/tcp
-proxy     nginx:alpine                Up 48 minutes (healthy)   0.0.0.0:80->80/tcp, [::]:80->80/tcp
