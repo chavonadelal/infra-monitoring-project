@@ -85,10 +85,10 @@ bash -n analyze_logs.sh
 - [Дамп HTTP-трафика](docs/evidence/http-traffic.pcapng), также вложенный в PDF.
 - [Скриншоты и вывод команд](docs/evidence/).
 
-Дамп снят tcpdump на `eth0` временного контейнера Docker Desktop
-с фильтром `tcp port 80`, затем открыт в Wireshark с фильтром `http`.
+HTTP-трафик сохранён в файл `http-traffic.pcapng` и проанализирован
+в Wireshark с фильтром `http`.
 В нём 42 пакета, из них 8 HTTP: запросы GET/POST к httpbin.org
-и ответы 200, 404, 503. IP клиента в сети Docker - 172.17.0.2,
+и ответы 200, 404, 503. IP клиента - 172.17.0.2,
 IP сервера на момент захвата - 54.172.45.38.
 
 ## Передача проекта через SSH и SCP
