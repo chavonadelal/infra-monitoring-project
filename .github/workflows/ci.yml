@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  monitoring:
+    name: Bash checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check Bash syntax
+        run: |
+          bash -n check_api.sh
+          bash -n analyze_logs.sh
+      - name: Check public API (expected exit code 0)
+        run: ./check_api.sh https://httpbin.org/status/200

@@ -1,0 +1,19 @@
+infra-monitoring-project | branch: feature/monitoring
+
+$ ./check_api.sh http://localhost:80
+API доступен
+exit code: 0
+
+$ ./check_api.sh https://httpbin.org/status/200
+API доступен
+exit code: 0
+
+$ ./check_api.sh https://httpbin.org/status/404
+API недоступен, код ответа: 404
+exit code: 1
+
+$ ./check_api.sh not-a-url
+Использование: ./check_api.sh http[s]://адрес/api
+API недоступен, код ответа: 000 (некорректный URL)
+exit code: 1
+

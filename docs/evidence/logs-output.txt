@@ -1,0 +1,19 @@
+infra-monitoring-project | branch: feature/monitoring
+
+$ ./analyze_logs.sh --generate
+Создан тестовый файл: access.log (360 строк)
+Общее количество запросов: 360
+Топ-3 IP-адреса (запросы IP):
+120 192.168.1.10
+90 10.0.0.5
+60 172.16.0.3
+Запросов с кодами 4xx: 72
+Запросов с кодами 5xx: 72
+exit code: 0
+
+$ wc -l access.log
+360 access.log
+
+$ head -n 2 access.log
+192.168.1.10 - - [15/Aug/2026:10:00:00] "GET /api/users HTTP/1.1" 200
+192.168.1.10 - - [15/Aug/2026:10:00:01] "GET /api/users HTTP/1.1" 201
