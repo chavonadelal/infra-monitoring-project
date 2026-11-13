@@ -21,8 +21,23 @@ jobs:
           bash -n analyze_logs.sh
       - name: Test scripts against local HTTP fixture and log samples
         run: python3 -m unittest discover -s tests -v
+      - name: Show log analysis in terminal
+        run: |
+          ./analyze_logs.sh --generate
+          wc -l access.log
       - name: Check public API (expected exit code 0)
         run: ./check_api.sh https://httpbin.org/status/200
+      - name: Show invalid URL and HTTP error examples
+        run: |
+          for url in not-a-url https://httpbin.org/status/404; do
+            echo "./check_api.sh $url"
+            set +e
+            ./check_api.sh "$url"
+            code=$?
+            set -e
+            echo "exit code: $code"
+            test "$code" -eq 1
+          done
       - name: Validate Compose configuration
         run: docker compose config --quiet
       - name: Start services and check proxy response
