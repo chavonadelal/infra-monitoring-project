@@ -107,4 +107,4 @@ ssh -i ~/.ssh/infra_monitoring deploy@example.org \
   'cd ~/infra-monitoring-project && tar -xzf project.tar.gz && docker compose up -d && curl --fail http://localhost:80'
 ```
 
-По заданию приведены команды деплоя; передача на реальный сервер не выполнялась.
+В README описаны генерация SSH-ключей, установка публичного ключа, передача архива через SCP и команды развёртывания проекта.
