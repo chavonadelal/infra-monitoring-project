@@ -131,8 +131,8 @@ python3 -m unittest discover -s tests -v
 Материалы доступны в `docs/`: [PDF-отчёт](docs/report.pdf),
 [реальный дамп .pcapng](docs/evidence/http-traffic.pcapng), скриншоты Wireshark
 и успешного GitHub Actions, текстовые протоколы запуска скриптов и Compose.
-**До окончательной сдачи требуется добавить скриншот `docker-compose ps`:**
-его фактический вывод сохранён, но снимок терминала ещё не получен.
+[Скриншот `docker-compose ps`](docs/evidence/docker-compose-ps.png) включён
+в раздел Docker Compose PDF-отчёта.
 Тестовые HTTP-запросы не содержат ключей, cookies или личных данных.
 
 Фактический захват выполнен tcpdump на `eth0` временного Linux-контейнера

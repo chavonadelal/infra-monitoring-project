@@ -10,10 +10,8 @@
 - `capture-output.txt`: фактический протокол захвата и HTTP-коды curl.
 - `api-output.txt`, `logs-output.txt`: фактический вывод Bash-скриптов.
 - `docker-output.txt`, `docker-compact.txt`: фактический `docker-compose ps`.
+- `docker-compose-ps.png`: настоящий скриншот терминала с `docker-compose ps`,
+  выбранными столбцами Service/Image/Status, ответом API и проверкой Nginx.
 
 SHA-256 дампа:
 `154906d7045b108bd9030fbd65bd4efa1258c911437c98dbcc2daaabde3b7aca`.
-
-Для окончательной сдачи необходимо добавить скриншот терминала с
-`docker-compose ps`. Снимки терминала не заменялись нарисованными изображениями.
-В отчёте текстовые протоколы помечены как вывод команд, а не скриншоты.
