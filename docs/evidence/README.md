@@ -1,7 +1,8 @@
 # Доказательства выполнения
 
 - `wireshark-http.png`: настоящий скриншот Wireshark 4.6.9 с display filter `http`.
-- `ci-success.jpg`: скриншот успешного GitHub Actions с проверками из задания.
+- `ci-success.jpg`: скриншот успешного GitHub Actions с проверками из задания,
+  запуск 43434136479, коммит d2bd6f7.
 - `http-traffic.pcapng`: 42 реальных Ethernet-пакета, снятых tcpdump на eth0
   временного Docker-контейнера. 8 пакетов распознаны как HTTP.
 - `api-output.txt`, `logs-output.txt`: фактический вывод Bash-скриптов.
